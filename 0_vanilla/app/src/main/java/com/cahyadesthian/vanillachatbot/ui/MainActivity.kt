@@ -1,7 +1,8 @@
-package com.cahyadesthian.vanillachatbot
+package com.cahyadesthian.vanillachatbot.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cahyadesthian.vanillachatbot.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
