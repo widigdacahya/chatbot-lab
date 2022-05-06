@@ -6,13 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_message_area"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linlayout_UI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/linlayout_UI"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:background="#e4e4e4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_message"
+            android:inputType="textShortMessage"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/white"
+            android:padding="12dp"
+            android:textColor="#000"
+            android:singleLine="true"
+            android:hint="Type Here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:backgroundTint="#26a69a"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
